@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Info</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Language:</td>
+        <td th:field="*{email.language}"></td>
+    </tr>
+    <tr>
+        <td>Page Size: </td>
+        <td><span>Show </span>
+            <p th:field="*{email.pageSize}"></p>
+            <span> emails per page</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Spam filter: </td>
+        <td>
+            <p th:if="*{email.spam}">
+                Enable spams filter
+            </p>
+        </td>
+    </tr>
+    <tr>
+        <td>Signature: </td>
+        <td><textarea rows="5" cols="15" th:field="*{email.signature}"></textarea> </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <a th:href="@{/email/}"><button>Cancel</button></a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

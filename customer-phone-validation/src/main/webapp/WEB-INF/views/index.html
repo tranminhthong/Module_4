@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Input PhoneNumber</title>
+    <link rel='stylesheet' href='/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css'>
+</head>
+<body>
+<form action="#" th:action="@{/check}" th:object="${phonenumber}" method="POST">
+    <div class="form-group">
+        <label>PhoneNumber</label>
+        <input class="form-control" type="text" th:field="*{number}"/>
+        <p th:if="${#fields.hasErrors('number')}" th:errors="*{number}">Name Error</p>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>

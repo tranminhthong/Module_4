@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Input PhoneNumber</title>
+    <link rel='stylesheet' href='/webjars/bootstrap/4.6.0-1/css/bootstrap.min.css'>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form action="#" th:action="@{/user/register}" th:object="${user}" method="POST">
+                <input type="hidden" th:field="*{id}">
+                <div class="form-group">
+                    <label>FirstName:</label>
+                    <input class="form-control" type="text" th:field="*{firstname}"/>
+                    <p th:if="${#fields.hasErrors('firstname')}" th:errors="*{firstname}">Name Error</p>
+                </div>
+                <div class="form-group">
+                    <label>LastName:</label>
+                    <input class="form-control" type="text" th:field="*{lastname}"/>
+                    <p th:if="${#fields.hasErrors('lastname')}" th:errors="*{lastname}">Name Error</p>
+                </div>
+                <div class="form-group">
+                    <label>PhoneNumber:</label>
+                    <input class="form-control" type="number" th:field="*{phoneNumber}"/>
+                    <p th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}">Name Error</p>
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input class="form-control" type="number" th:field="*{age}"/>
+                    <p th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Name Error</p>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input class="form-control" type="email" th:field="*{email}"/>
+                    <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Name Error</p>
+                </div>
+                <input type="submit" class="btn btn-primary" th:value="Submit"/>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+</body>
+</html>

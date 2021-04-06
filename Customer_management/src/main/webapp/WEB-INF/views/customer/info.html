@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="*{customer.lastName}"></title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>First Name: </th>
+        <td th:text="*{customer.firstName}"></td>
+    </tr>
+    <tr>
+        <th>Last Name: </th>
+        <td th:text="*{customer.lastName}"></td>
+    </tr>
+    <tr>
+        <th>Email: </th>
+        <td th:text="*{customer.email}"></td>
+    </tr>
+    <tr>
+        <th>Province: </th>
+        <td th:text="*{customer.province.name}"></td>
+    </tr>
+</table>
+</body>
+</html>
