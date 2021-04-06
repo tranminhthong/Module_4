@@ -17,6 +17,6 @@ public class Logger {
         String className  = jp.getTarget().getClass().getSimpleName();
         String method = jp.getSignature().getName();
         String args  = Arrays.toString(jp.getArgs());
-        System.out.printf("có lỗi xảy ra: %s.%s%s: %s \n",className,method,args,e.getMessage());
+        System.out.printf("co loi xay ra: %s.%s%s: %s \n",className,method,args,e.getMessage());
     }
 }
